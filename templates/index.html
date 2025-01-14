@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Herdruk-tool</title>
+</head>
+<body>
+    <h1>Herdruk-tool Maven Publishing</h1>
+    <form action="/bereken" method="post">
+        <h2>Verkoop laatste 7 dagen</h2>
+        <label for="cb_bol_7">CB (Bol.com):</label>
+        <input type="number" step="0.01" name="cb_bol_7" id="cb_bol_7" required><br><br>
+
+        <label for="cb_overig_7">CB (overige boekhandels):</label>
+        <input type="number" step="0.01" name="cb_overig_7" id="cb_overig_7" required><br><br>
+
+        <label for="webshop_7">Eigen webshop:</label>
+        <input type="number" step="0.01" name="webshop_7" id="webshop_7" required><br><br>
+
+        <h2>Verkoop sinds publicatie (optioneel)</h2>
+        <label for="datum_publicatie">Datum publicatie:</label>
+        <input type="date" name="datum_publicatie" id="datum_publicatie"><br><br>
+
+        <label for="totaal_verkocht">Totaal aantal verkopen:</label>
+        <input type="number" step="0.01" name="totaal_verkocht" id="totaal_verkocht"><br><br>
+
+        <h2>Huidige voorraad</h2>
+        <label for="voorraad_cb">Aantal exemplaren CB:</label>
+        <input type="number" step="0.01" name="voorraad_cb" id="voorraad_cb" required><br><br>
+
+        <label for="voorraad_webshop">Aantal exemplaren webshop:</label>
+        <input type="number" step="0.01" name="voorraad_webshop" id="voorraad_webshop" required><br><br>
+
+        <h2>Herdruk</h2>
+        <label for="duur_herdruk">Duur herdruk (dagen):</label>
+        <input type="number" step="1" name="duur_herdruk" id="duur_herdruk" required><br><br>
+
+        <input type="checkbox" name="ai_enhanced" id="ai_enhanced">
+        <label for="ai_enhanced">AI-enhanced</label><br><br>
+
+        <input type="submit" value="Berekenen">
+    </form>
+</body>
+</html>
