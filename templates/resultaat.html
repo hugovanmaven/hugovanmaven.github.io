@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultaten</title>
 </head>
 <body>
-    <h1>Resultaat herdruk-berekening</h1>
-    <p>Aantal dagen voorraad: {{ resultaten.dagen_voorraad }}</p>
-    <p>Datum wanneer voorraad opraakt: {{ resultaten.voorraad_op_datum }}</p>
-    <p>Voorstel voor de hoogte van de oplage: {{ resultaten.voorgestelde_oplage }}</p>
-    <p>Datum dat de herdruk moet starten: {{ resultaten.herdruk_start }}</p>
+    <h1>Resultaten</h1>
+    <ul>
+        <li>Gemiddelde verkoop per dag: {{ resultaten.gem_verkoop_per_dag }}</li>
+        <li>Dagen voorraad: {{ resultaten.dagen_voorraad }}</li>
+        <li>Voorraad op datum: {{ resultaten.voorraad_op_datum }}</li>
+        <li>Break-even oplage: {{ resultaten.break_even_oplage }}</li>
+        <li>Voorgestelde oplage: {{ resultaten.voorgestelde_oplage }}</li>
+        <li>Herdruk starten op: {{ resultaten.herdruk_start }}</li>
+    </ul>
     <a href="/">Terug naar invoer</a>
 </body>
 </html>

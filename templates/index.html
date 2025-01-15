@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Herdruk-tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oplage Berekening</title>
 </head>
 <body>
-    <h1>Herdruk-tool Maven Publishing</h1>
-    <form action="/bereken" method="post">
-        <h2>Verkoop laatste 7 dagen</h2>
-        <label for="cb_bol_7">CB (Bol.com):</label>
-        <input type="number" step="0.01" name="cb_bol_7" id="cb_bol_7" required><br><br>
+    <h1>Oplage Berekening</h1>
+    <form action="/bereken" method="POST">
+        <label>Gemiddelde maandverkoop:</label>
+        <input type="number" name="gemiddelde_maandverkoop" step="0.01" required><br>
 
-        <label for="cb_overig_7">CB (overige boekhandels):</label>
-        <input type="number" step="0.01" name="cb_overig_7" id="cb_overig_7" required><br><br>
+        <label>Retourpercentage (%):</label>
+        <input type="number" name="retour_percentage" step="0.01" value="10" required><br>
 
-        <label for="webshop_7">Eigen webshop:</label>
-        <input type="number" step="0.01" name="webshop_7" id="webshop_7" required><br><br>
+        <label>Kosten per eenheid (€):</label>
+        <input type="number" name="kosten_per_eenheid" step="0.01" value="2" required><br>
 
-        <h2>Verkoop sinds publicatie (optioneel)</h2>
-        <label for="datum_publicatie">Datum publicatie:</label>
-        <input type="date" name="datum_publicatie" id="datum_publicatie"><br><br>
+        <label>Verkoopprijs (€):</label>
+        <input type="number" name="verkoopprijs" step="0.01" value="20" required><br>
 
-        <label for="totaal_verkocht">Totaal aantal verkopen:</label>
-        <input type="number" step="0.01" name="totaal_verkocht" id="totaal_verkocht"><br><br>
+        <label>CB verkoop laatste 7 dagen:</label>
+        <input type="number" name="cb_bol_7" step="0.01"><br>
 
-        <h2>Huidige voorraad</h2>
-        <label for="voorraad_cb">Aantal exemplaren CB:</label>
-        <input type="number" step="0.01" name="voorraad_cb" id="voorraad_cb" required><br><br>
+        <label>Overige verkoop laatste 7 dagen:</label>
+        <input type="number" name="cb_overig_7" step="0.01"><br>
 
-        <label for="voorraad_webshop">Aantal exemplaren webshop:</label>
-        <input type="number" step="0.01" name="voorraad_webshop" id="voorraad_webshop" required><br><br>
+        <label>Webshop verkoop laatste 7 dagen:</label>
+        <input type="number" name="webshop_7" step="0.01"><br>
 
-        <h2>Herdruk</h2>
-        <label for="duur_herdruk">Duur herdruk (dagen):</label>
-        <input type="number" step="1" name="duur_herdruk" id="duur_herdruk" required><br><br>
+        <label>Voorraad CB:</label>
+        <input type="number" name="voorraad_cb" step="0.01"><br>
 
-        <input type="checkbox" name="ai_enhanced" id="ai_enhanced">
-        <label for="ai_enhanced">AI-enhanced</label><br><br>
+        <label>Voorraad Webshop:</label>
+        <input type="number" name="voorraad_webshop" step="0.01"><br>
 
-        <input type="submit" value="Berekenen">
+        <label>Levertijd herdruk (dagen):</label>
+        <input type="number" name="duur_herdruk" step="1" required><br>
+
+        <button type="submit">Bereken</button>
     </form>
 </body>
 </html>
